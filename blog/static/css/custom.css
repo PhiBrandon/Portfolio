@@ -1,0 +1,98 @@
+
+body{
+	background:#E6EDF8;
+}
+.header{
+	text-align:center;
+	font-family: 'Orbitron', sans-serif;
+	margin-top:10px;
+}
+#row_padding{
+	margin-top:50px;
+}
+
+#hero_box{
+	height:500px;
+	padding-top:50px;
+}
+.logo-bar{
+	width:100%;
+}
+.logo-bar h1{
+	font-family: 'Orbitron', sans-serif;
+	border-bottom:1px solid black;
+	padding-bottom:10px;
+}
+.nav-bar{
+	display: grid;
+	grid-template-columns: repeat(3, 1fr);
+	grid-template-rows:minmax(50px,1fr);
+	grid-column-gap=20px;
+	width:100%;
+	margin-top:10px;
+	text-align:center;
+	
+
+}
+
+.post{
+	padding:30px;
+}
+.post h2 a{
+	text-decoration: none;
+	color:black;
+}
+.post h2 a:hover{
+	color:white;
+}
+.post-box h2{
+	text-align:center;
+	font-family: 'Roboto', sans-serif;
+}
+
+.top-post{
+	margin:0 auto;
+}
+.feature{
+	margin: 0 auto;
+	max-width:33.333333%;
+}
+#pubtime{
+	font-size:15px;
+}
+img {
+	width:100%;
+	border-radius: 10px;
+}
+
+#check-it-out{
+	padding:20px;
+	margin-bottom:0;
+}
+@media screen and (max-width:665px ){
+	#fix {
+		margin-bottom:50px;
+	}
+}
+#fix2{
+	animation-delay: 0.7s;
+}
+#fix3{
+	animation-delay: 1.4s;
+}
+.port_row{
+	margin-top:30px;
+}
+.p-center h5{
+	margin-top:20%;
+}
+#image_bounce{
+	animation-delay: .7s;
+}
+
+#margin-row{
+	margin-top:20px;
+}
+#home_board{
+	margin-bottom:0px;
+}

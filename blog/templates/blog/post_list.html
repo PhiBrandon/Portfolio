@@ -1,0 +1,78 @@
+{% extends 'blog/header.html' %}
+{% block content %}
+{% load staticfiles %}
+<div class="row indigo darken-4 center-align white-text" id="hero_box">
+	<div class="col s12 m12 l12">
+		<h1>Welcome to the Ethereal Nation</h1>	
+	</div>
+	<div class="col s12 m12 l12">
+		<h4>Follow me as I journey into the depths of creativity!</h4>
+	</div>
+	<div class="col s12 m12 l12">
+		<h5>Check me out on social media!</h5>
+	</div>
+	<div class="row" id="row_padding">
+		
+				<div class="col s4 m4 l4 animated bounceInLeft right-align" id="row_padding">
+					<a href="#" class="btn waves-effect waves-light indigo "><i class="fa fa-facebook-official left" aria-hidden="true"></i>Facebook</a>
+				</div>
+				<div class="col s4 m4 l4 animated bounceInUp" id="row_padding">
+					<a  href="#"" class="btn waves-effect waves-light purple "><i class="fa fa-instagram left" aria-hidden="true"></i></i>Instagram</a>
+				</div>
+				<div class="col s4 m4 l4 animated bounceInRight left-align" id="row_padding">
+					<a  href="#"" class="btn waves-effect waves-light blue"><i class="fa fa-linkedin left" aria-hidden="true"></i></i>Linkedin</a>
+				</div>
+		
+	</div>
+</div>
+<div class="header">
+	
+</div>
+
+<div class="container">
+	<div class="row">
+		<div class="col s12 m12 l12 center-align">
+			<h1>Recent Blog Post</h1>
+		</div>
+{% for p in post %}	
+		<div class="col s12 m4 l4 animated bounceInLeft" id="fix{{ forloop.counter }}">
+			
+				<div class="col s12 m12 l12 ">
+					{% with 'images/'|add:p.image as image_static %}
+					<img class="responsive-img hoverable" src="{% static image_static %}">
+					{% endwith %}
+				</div>
+				
+				<div class="col s12 m12 l12 center-align blog-snip">
+					<h5><a href="/article/{{p.id}}" >{{p.title}}</a></h5>
+				
+				</div>	
+				<div class="col s12 m12 l12 center-align">
+				{{p.date}}/{{p.user}}
+				</div>
+		</div>
+{% endfor %}	
+	</div>
+</div>
+
+<div class="row center-align indigo" id="home_board" >
+	
+		<div class="row" id="home_board">
+			<div class="col s12 m6 l6 indigo lighten-1 " id="check-it-out">
+				<i class="large material-icons">dashboard</i>
+				<h4>Want to see some cool projects?</h4>
+				<a class="btn" href="/portfolio/">Check them out</a>
+			</div>
+		</div>
+
+		<div class="row" id="home_board">
+			<div class="col s12 m6 l6 offset-l6 offset-m6 indigo lighten-1" id="check-it-out">
+				<i class="large material-icons">build</i>
+				<h4>Need some custom work done?</h4>
+				<a class="btn" href="/contact_me/">Contact</a>
+			</div>
+		</div>
+	
+</div>
+
+{% endblock %}

@@ -1,0 +1,38 @@
+{% extends 'blog/header.html' %}
+{% block content %}
+{% load staticfiles %}
+
+{% for app in list %}
+{% if app.id|divisibleby:"2" %}
+<div class="row port_row center-align">
+	
+	<div class="col s6 m6 l6 animated bounceIn" id="image_bounce">
+		<h4>{{app.title}}</h4>
+	{% with 'images/'|add:app.image as static_image %}
+		<img class="responseive-img hoverable" src="{% static static_image %}">
+	{% endwith %}
+	</div>
+	<div class="col s6 m6 l6 p-center animated bounceInRight">
+		<h5>{{app.description}}</h5>
+	</div>
+	
+</div>
+{% endif %}
+<div class="row port_row center-align" >
+	<div class=" col s6 m6 l6 p-center animated bounceInLeft">
+		<h5>{{app.description}}</h5>
+	</div>
+	
+	<div class="col s6 m6 l6 animated bounceIn" id="image_bounce">
+		<h4>{{app.title}}</h4>
+	{% with 'images/'|add:app.image as static_image %}
+		<img class="responseive-img hoverable" src="{% static static_image %}">
+	{% endwith %}
+	</div>		
+</div>
+
+{% endfor %}
+
+
+
+{% endblock %}

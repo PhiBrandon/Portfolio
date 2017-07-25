@@ -1,0 +1,25 @@
+{% extends 'blog/header.html' %}
+{% load staticfiles %}
+{% block content %}
+<div class="row" id="margin-row">
+	<div class="container">
+		<div class="col s12 m12 l6 animated bounceInLeft">
+		{% with 'images/'|add:'me2.jpg' as image_static %}
+			<img class="responsive-img" src="{% static image_static %}">
+		{% endwith %}
+		</div>
+		<div class="col s12 m12 l6 animated bounceInRight">
+			<p class="flow-text center-align">Hello there! My name is <b>The Etherian</b>... Some call me...</p> 
+			<p class="center-align flow-text"><i class="center-align">Brandon Phillips.</i><br/> <h3 class="center-align">I'm an aspiring developer!</h3></p>
+			<p class="flow-text center-align">My goal is to produce 'cool' things for others as well as be able to teach the younger generations about this awesome tool we have that is <b>The internet!</b></p>
+			<p class="center-align">Thanks for taking the time to visit my profile, I wish you the best and if you have any questions...</p>
+			<div class="row center-align">
+				<a href="/contact_me/" class="btn-large indigo">Contact me</a>
+			</div>
+		</div>
+	</div>
+</div>
+
+
+
+{% endblock %}

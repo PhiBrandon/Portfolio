@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html>
+<head>
+	{% load staticfiles %}
+	<title>Ethereal Grammar</title>
+	<link rel="stylesheet" type="text/css" href="{% static 'css/custom.css' %}"> 
+	<link rel="stylesheet"
+  href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.5.2/animate.min.css"
+  integrity="sha384-OHBBOqpYHNsIqQy8hL1U+8OXf9hH6QRxi0+EODezv82DfnZoV7qoHAZDwMwEJvSw"
+  crossorigin="anonymous">
+	<link href="https://fonts.googleapis.com/css?family=Orbitron" rel="stylesheet">
+	<link href="https://fonts.googleapis.com/css?family=Roboto" rel="stylesheet">
+	<link rel="stylesheet" type="text/css" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+	  <!-- Compiled and minified CSS -->
+  	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.100.1/css/materialize.min.css">
+  	<link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+
+  	
+</head>
+<body>
+	<nav>	
+		<div class="nav-wrapper indigo">
+		<a href="/" class="brand-logo">EtherealGrammar</a>
+		<ul id="nav-mobile" class="right hide-on-med-and-down">
+			<li><a href="/about/">About</a></li>
+			<li><a href="/portfolio/">Portforlio</a></li>
+			<li><a href="/contact_me/">Contact</a></li>
+		</ul>
+		</div>
+	</nav>
+		{% block content %}
+		{% endblock %}
+
+<script type="text/javascript" src="https://code.jquery.com/jquery-3.2.1.min.js"></script>
+<!-- Compiled and minified JavaScript -->
+ <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.100.1/js/materialize.min.js"></script>
+</body>
+</html>
